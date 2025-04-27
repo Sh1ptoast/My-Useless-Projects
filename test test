@@ -62,9 +62,9 @@ int main() {
     cout << "You ";
     if ( correct_ans_total < 10) {
         if ( correct_ans_total > 6 ) {
-            cout << "only";
+            cout << "only ";
         }
-        cout << " got " << ( 10 - correct_ans_total ) << " wrong." << endl;
+        cout << "got " << ( 10 - correct_ans_total ) << " wrong." << endl;
     } else {
         cout << "got them all correct!" << endl;
     }
