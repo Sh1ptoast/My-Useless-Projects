@@ -9,10 +9,10 @@ int main() {
     cout << "1 - bounces" << endl;
     cout << "2 - back-and-forths" << endl;
     cin >> choice;
-    if (choice == 1) {
+    if (choice == "1" || choice == "bounces") {
         int bounce = 0;
         cout << "work in progress" << endl;
-    } else if (choice == 2) {
+    } else if (choice == "2" || choice == "back-and-forths") {
         int baf = 0;
         cout << "How many back-and-forths do you want?" << endl;
         cout << "Number of back-and-forths: ";
@@ -32,7 +32,15 @@ int main() {
             cout << "bounce" << endl;
             }
         }
+    } else if (choice == "\"1\"" || choice == "\"2\"" ||
+    choice == "\"1\" or \"2\"" || choice == "\"1\" or \"2\".") {
+        cout << "..." << endl;
+        cout << "bees be upon you" << endl;
+        for ( int bees = 0; bees <= 4; bees++) {
+            cout << "🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝"
+            << endl;
+        }
     } else {
-        
+        cout << "Erm... invalid? Try typing \"1\" or \"2\"." << endl;
     }
 }
