@@ -1,24 +1,38 @@
+#include <string>
 #include <iostream>
 using namespace std;
 
 int main() {
-    int c = 0;
-    cout << "How many back-and-forths do you want?" << endl;
-    cout << "Number of back-and-forths: ";
-    cin >> c;
-    cout << endl << endl;
-    for (int y = 0; y < c; y++) {
-        for ( int i = 0; i < 10; i++) {
-            for ( int x = i; x >0; x--) {
-                cout << " ";
+    string choice = "0";
+    cout << "Do you wanna say how many bounces or back-and-forths this does?"
+    << endl;
+    cout << "1 - bounces" << endl;
+    cout << "2 - back-and-forths" << endl;
+    cin >> choice;
+    if (choice == 1) {
+        int bounce = 0;
+        cout << "work in progress" << endl;
+    } else if (choice == 2) {
+        int baf = 0;
+        cout << "How many back-and-forths do you want?" << endl;
+        cout << "Number of back-and-forths: ";
+        cin >> baf;
+        cout << endl << endl;
+        for (int y = 0; y < baf; y++) {
+            for ( int i = 0; i < 10; i++) {
+                for ( int x = i; x >0; x--) {
+                    cout << " ";
+                }
+            cout << "bounce" << endl;
             }
-        cout << "bounce" << endl;
-        }
-        for ( int i = 8; i > 0; i--) {
-            for ( int x = i; x >0; x--) {
-                cout << " ";
+            for ( int i = 8; i > 0; i--) {
+                for ( int x = i; x >0; x--) {
+                    cout << " ";
+                }
+            cout << "bounce" << endl;
             }
-        cout << "bounce" << endl;
         }
+    } else {
+        
     }
 }
