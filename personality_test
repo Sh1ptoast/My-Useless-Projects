@@ -1,0 +1,26 @@
+#include <string>
+#include <iostream>
+using namespace std;
+
+string yon = "no";
+int good = 0;
+int bad = 0;
+
+int main() {
+    while (true) {
+        cout << "Hello there, I have a question for you. Do you want to take " <<
+        "the best personality test on the internet?\n";
+        cin >> yon;
+        if (yon == "yes" or yon == "y") {
+            ++good;
+            //test
+            break;
+        } else if (yon == "no" or yon == "n") {
+            cout << "... if you didn't wanna take it, then why did you show up?";
+            break;
+        }else {
+            cout << "bro take ihis serious\n";
+            ++bad;
+        }
+    } return 0;
+}
