@@ -41,6 +41,6 @@ int main() {
             << endl;
         }
     } else {
-        cout << "Erm... invalid? Try typing \"1\" or \"2\"." << endl;
+        cout << "Erm... invalid? Try typing \"1\" or \"2\" next time." << endl;
     }
 }
