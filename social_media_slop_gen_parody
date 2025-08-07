@@ -14,14 +14,28 @@ slop posted on those sites, as it simply drives further divides between us.
 
 int main()
 {
+    // strigs set-up
+    std::string group[] = {"Liberals are", "The right is", "The woke left is",
+        "Conservatives are", "Communists are"
+    };
+    std::string emotion[] = {"hating that", "mad that", "angry because"};
+    std::string thing[] = {"dogs are", "Trump is", "Biden is", "China is",
+        "the media is", "birds are", "billionaires are"
+    };
+    std::string attribute[] = {"smart", "bigoted", "not real", "winning",
+        "losing"
+    };
+    
+    // random number generator
     srand(time(0));
-    std::string group[] = {"Liberals", "The right", "The woke left",
-    "Conservatives", "Communists"};
-    //std::string emotion[] = {""
+    int gx = rand() % 5;
+    int ex = rand() % 3;
+    int tx = rand() % 7;
+    int ax = rand() % 5;
     
     // starts the loop
-    int x = rand() % 5;
-    std::cout << group[x] << " ";
+    std::cout << group[gx] << " " << emotion[ex] << " " << thing[tx] << " "
+    << attribute[ax];
     
     return 0;
 }
