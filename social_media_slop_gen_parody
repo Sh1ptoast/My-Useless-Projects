@@ -22,8 +22,12 @@ int main()
     std::string thing[] = {"dogs are", "Trump is", "Biden is", "China is",
         "the media is", "birds are", "billionaires are"
     };
-    std::string attribute[] = {"smart", "bigoted", "not real", "winning",
+    std::string attribute[] = {"being hated", "bigoted", "not real", "failing",
         "losing"
+    };
+    std::string cause[] = {"of climate change", "of communism", "of woke",
+        "the sky is falling", "Redwall is the best series ever", "of Obama",
+        "the Cubs won in 2016"
     };
     
     // random number generator
@@ -32,10 +36,19 @@ int main()
     int ex = rand() % 3;
     int tx = rand() % 7;
     int ax = rand() % 5;
+    int if_statement = rand() % 3;
+    int cx = rand() % 7;
     
     // starts the loop
     std::cout << group[gx] << " " << emotion[ex] << " " << thing[tx] << " "
     << attribute[ax];
+    
+    // possible additional piece
+    if (if_statement == 2) {
+        std::cout << " because " << cause[cx] << "\n";
+    } else {
+        std::cout << "\n";
+    }
     
     return 0;
 }
