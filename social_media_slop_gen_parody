@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <time.h>
+
+/*
+README: IMPORTANT
+This is a satirical project meant to make fun of the constant culture war
+posts on social media sites like Twitter (currently known as X) and Facebook,
+this in NO WAY is representative of the views of its creator, and is purely
+meant for satirical purposes. The creator (me) is openly against the content
+slop posted on those sites that is meant to drive further divides between
+people.
+*/
+
+int main()
+{
+    srand(time(0));
+    std::string group[] = {"Liberals", "The right", "The woke left",
+    "Conservatives", "Communists"};
+    //std::string emotion[] = {""
+    
+    // starts the loop
+    int x = rand() % 5;
+    std::cout << group[x] << " ";
+    
+    return 0;
+}
