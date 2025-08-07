@@ -18,7 +18,8 @@ int main()
     std::string group[] = {"Liberals are", "The right is", "The woke left is",
         "Conservatives are", "Communists are"
     };
-    std::string emotion[] = {"hating that", "mad that", "angry because"};
+    std::string emotion[] = {"hating that", "mad that", "angry because"
+    };
     std::string thing[] = {"dogs are", "Trump is", "Biden is", "China is",
         "the media is", "birds are", "billionaires are"
     };
