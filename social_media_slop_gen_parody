@@ -63,21 +63,16 @@ int main()
         // loop
         std::string loop;
         if (first_time == 1) {
-            std::cout << "\n\nPress enter to redo, type \"exit\" to exit: ";
+            std::cout << "\n\nPress enter to redo, type anything to exit: ";
         }
         std::getline(std::cin, loop);
-        if(loop == "exit") {
-            std::cout << "\n";
-            break;
-        } else if (loop.empty()) {
+        if (loop.empty()) {
             std::cout << "\n";
             continue;
         } else {
             std::cout << "\n";
-            continue;
+            break;
         }
     }
-    
-    
     return 0;
 }
