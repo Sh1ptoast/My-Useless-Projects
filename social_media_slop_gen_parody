@@ -31,25 +31,53 @@ int main()
         "the Cubs won in 2016"
     };
     
-    // random number generator
+    // sets random seed (note: ONLY RUN ONCE EVER!!!!!)
     srand(time(0));
-    int gx = rand() % 5;
-    int ex = rand() % 3;
-    int tx = rand() % 7;
-    int ax = rand() % 5;
-    int if_statement = rand() % 3;
-    int cx = rand() % 7;
+    
+    // set number of runs
+    int first_time = 0;
     
     // starts the loop
-    std::cout << group[gx] << " " << emotion[ex] << " " << thing[tx] << " "
-    << attribute[ax];
-    
-    // possible additional piece
-    if (if_statement == 2) {
-        std::cout << " because " << cause[cx] << "\n";
-    } else {
-        std::cout << "\n";
+    while(true) {
+        // random number generator
+        int gx = rand() % 5;
+        int ex = rand() % 3;
+        int tx = rand() % 7;
+        int ax = rand() % 5;
+        int if_statement = rand() % 3;
+        int cx = rand() % 7;
+        
+        // initial output
+        std::cout << group[gx] << " " << emotion[ex] << " " << thing[tx] << " "
+        << attribute[ax];
+        ++first_time;
+        
+        // possible additional piece
+        if (if_statement == 2) {
+            std::cout << " because " << cause[cx];
+            std::cout << "";
+        } else {
+            std::cout << "";
+        }
+        
+        // loop
+        std::string loop;
+        if (first_time == 1) {
+            std::cout << "\n\nPress enter to redo, type \"exit\" to exit: ";
+        }
+        std::getline(std::cin, loop);
+        if(loop == "exit") {
+            std::cout << "\n";
+            break;
+        } else if (loop.empty()) {
+            std::cout << "\n";
+            continue;
+        } else {
+            std::cout << "\n";
+            continue;
+        }
     }
+    
     
     return 0;
 }
