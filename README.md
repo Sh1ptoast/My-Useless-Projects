@@ -1,0 +1,1 @@
+Welcome to my useless projects! I am (as of the time writing this) a C++ coder in college for a degree in Computer Science. This is a collection of some fun projects I've done in my free time. Feel free to copy or download these and put them into something to run them. I use https://www.onlinegdb.com/online_c++_compiler because it's quicker than regular Github tools.
