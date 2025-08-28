@@ -18,6 +18,12 @@ int main() {
         while (choice == 2) {
             
         }
+        while (choice == 3) {
+            
+        }
+        while (choice == 4) {
+            
+        }
         while (choice == 5) {
             int factorial = 1; // result
             int fInput = 0; // input
