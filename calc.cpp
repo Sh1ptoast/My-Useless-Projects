@@ -3,17 +3,42 @@ using namespace std;
 
 int main() {
     int choice = 0;
+    int uses = 0;
     while (true) {
         while (choice == 0) {
-            cout << "Welcome to the calculator app! choose what you want to see.\n" <<
-            "1. addition\n2. subtraction\n3. multiplication\n4. division (no remainder)\n5. factorials\n6. exit\n\n" <<
-            "Your choice: ";
+            if (uses == 0) {
+                cout << "Welcome to the calculator app! choose what you want to see.\n" <<
+                "1. addition\n2. subtraction\n3. multiplication\n4. division (no remainder)\n5. factorials\n6. exit\n\n" <<
+                "Your choice: ";
+                ++uses;
+            } else {
+                cout << "Welcome back! choose what you want to see.\n" <<
+                "1. addition\n2. subtraction\n3. multiplication\n4. division (no remainder)\n5. factorials\n6. exit\n\n" <<
+                "Your choice: ";
+                ++uses;
+            }
             cin >> choice;
             cout << "\n";
         }
         
         while (choice == 1) {
+            int add1 = 0;
+            int add2 = 0;
+            int sum = 0;
             
+            cout << "Type what two numbers you want to be added, type both as zero to leave.\nFirst number: ";
+            cin >> add1;
+            cout << "And the second number: ";
+            cin >> add2;
+            
+            if (add1 == 0 && add2 == 0) {
+                choice = 0;
+                cout << "\n";
+            }
+            if (choice != 0) {
+                sum = add1 + add2;
+                cout << "The sum is "<< sum << ".\n\n";
+            }
         }
         while (choice == 2) {
             
@@ -28,11 +53,11 @@ int main() {
             int factorial = 1; // result
             int fInput = 0; // input
             
-            cout << "Welcome to the factorial calculator! Type what number you want to be factorialed, type 0 to leave.\n"<< "Factorial: ";
+            cout << "Type what number you want to be factorialed, type 0 to leave.\nFactorial: ";
             cin >> fInput;
             
             if (fInput == 0) { // exit
-                cout << "\n\n";
+                cout << "\n";
                 choice = 0;
             }
             if (fInput < 0) {
@@ -43,7 +68,7 @@ int main() {
                 for (fInput; fInput > 1; --fInput) { // does the math
                     factorial = factorial * fInput;
                 }
-                cout << factorial << "\n";
+                cout << "The factorial is " << factorial << ".\n\n";
             }
         }
         if (choice == 6) {
@@ -51,6 +76,5 @@ int main() {
             break;
         }
     }
-
-    return 0;
+    return uses;
 }
