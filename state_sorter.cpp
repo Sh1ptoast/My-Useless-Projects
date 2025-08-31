@@ -3,8 +3,7 @@
 #include <string>
 using namespace std;
 
-int main()
-{
+int main() {
     string state[] = {"texas", "iowa", "colorado", "california", "missouri", "newjersey", "montana", "tennessee",
     "arkansas", "virginia", "utah", "southcarolina", "newyork", "minnesota", "nebraska", "northcarolina", "georgia",
     "louisiana", "florida", "wisconsin", "oregon", "washington"};
