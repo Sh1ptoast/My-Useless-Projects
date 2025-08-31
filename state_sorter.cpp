@@ -13,7 +13,7 @@ int main()
     sort (state, state + size);
     
     for (int i = 0; i < size; ++i) {
-        cout << state[i] << std::endl;
+        cout << state[i] << "\n";
     }
     return 0;
 }
