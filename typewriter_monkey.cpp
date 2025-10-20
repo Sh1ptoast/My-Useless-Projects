@@ -10,6 +10,8 @@ int main() {
     vector<char> v_input;
     vector<char> v_guess;
     int num_guess = 0; // number of guesses
+    vector<string> comments = {"\nBeen a while, huh?\n", "\n...\n", "\nStill waiting...\n",
+        "\n*sigh*\n", "\nWell this is taking forever\n", "\nThis is kinda boring ngl...\n"};
     
     // sets input and input size
     cout << "Welcome to the needlessly complicated input reader! Enter the string you want repeated: ";
@@ -27,9 +29,15 @@ int main() {
             v_guess[i] = (letters[rand() % 95]);
         }
         ++num_guess;
+        
         // checks the guess
         if (v_guess == v_input) {
             break;
+        }
+        
+        // gives comments
+        if (num_guess % 25000000 == 0) {
+            cout << comments[rand() % 6];
         }
     }
     
