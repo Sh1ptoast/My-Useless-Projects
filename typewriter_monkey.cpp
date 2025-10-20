@@ -41,7 +41,7 @@ int main() {
         }
     }
     
-    cout << "Your word was: ";
+    cout << "\nYour word was: ";
     // outputs the string
     for (int i = 0; i < input_size; ++i) {
         cout << v_guess[i];
