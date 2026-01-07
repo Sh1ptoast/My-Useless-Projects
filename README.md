@@ -2,4 +2,4 @@ Welcome to my simple projects! I am a C++ coder with a degree in Computer Scienc
 
 Please note that not all of these projects are in their finished states, some may loop, end abruptly, or have errors. 
 
-As a final note, I am currentlyworking on an unreleased text-based game, so I am not uploading many new files here as frequently as I used to.
+As a final note, I am currently working on an unreleased text-based game, so I am not uploading many new files here as frequently as I used to.
