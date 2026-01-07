@@ -1,1 +1,3 @@
-Welcome to my useless projects! I am (as of the time writing this) a C++ coder in college for a degree in Computer Science. This is a collection of some fun projects I've done in my free time. Feel free to copy or download these and put them into something to run them. I use https://www.onlinegdb.com/online_c++_compiler because it's quicker than regular Github tools.
+Welcome to my simple projects! I am a C++ coder with a degree in Computer Science. This is a collection of some fun projects I've done in my free time. Feel free to copy or download these if you want. To run them in Codespace, go to the file and press F5, then click into the console and follow the instructions it outputs.
+
+Please note that not all of these projects are in their finished states, some may loop, end abruptly, or have errors. 
