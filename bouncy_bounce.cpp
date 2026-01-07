@@ -37,8 +37,7 @@ int main() {
         cout << "..." << endl;
         cout << "bees be upon you" << endl;
         for ( int bees = 0; bees <= 4; bees++) {
-            cout << "🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝"
-            << endl;
+            cout << "🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝🐝\n";
         }
     } else {
         cout << "Erm... invalid? Try typing \"1\" or \"2\" next time." << endl;
