@@ -5,76 +5,119 @@ int main() {
     int choice = 0;
     int uses = 0;
     while (true) {
-        while (choice == 0) {
+        
+        // menu
+        if (choice == 0) {
             if (uses == 0) {
-                cout << "Welcome to the calculator app! choose what you want to see.\n" <<
+                cout << "Welcome to the calculator app! choose what you want to see. Type \"exit\" to exit a mode.\n" <<
                 "1. addition\n2. subtraction\n3. multiplication\n4. division (no remainder)\n5. factorials\n6. exit\n\n" <<
                 "Your choice: ";
                 ++uses;
             } else {
-                cout << "Welcome back! choose what you want to see.\n" <<
+                cout << "Welcome back! choose what you want to see. Remember, you can type \"exit\" to exit a mode.\n" <<
                 "1. addition\n2. subtraction\n3. multiplication\n4. division (no remainder)\n5. factorials\n6. exit\n\n" <<
                 "Your choice: ";
                 ++uses;
             }
             cin >> choice;
+            
+            // if fail
+            if (cin.fail() || choice < 1 || choice > 6) {
+                cin.clear();
+                cin.ignore(1000,'\n');
+                choice = 0;
+                cout << "\ninvalid input, restarting now\n\n";
+                continue;
+            }
             cout << "\n";
         }
         
-        while (choice == 1) {
+        // addition
+        else if (choice == 1) {
             int add1 = 0;
             int add2 = 0;
             int sum = 0;
             
-            cout << "Type what two numbers you want to be added, type both as zero to leave.\nFirst number: ";
+            cout << "Type what two numbers you want to be added.\nFirst number: ";
             cin >> add1;
             cout << "And the second number: ";
             cin >> add2;
             
-            if (add1 == 0 && add2 == 0) {
+            // failsafe + exit
+            if (cin.fail()) {
+                cin.clear();
+                cin.ignore(1000,'\n');
                 choice = 0;
-                cout << "\n";
+                cout << "\nexiting mode...\n\n";
+                continue;
             }
-            if (choice != 0) {
-                sum = add1 + add2;
-                cout << "The sum is "<< sum << ".\n\n";
-            }
+            
+            sum = add1 + add2;
+            cout << "The sum is "<< sum << ".\n\n";
+            choice = 0;
         }
-        while (choice == 2) {
+        
+        // subtraction
+        else if (choice == 2) {
             
         }
-        while (choice == 3) {
+        
+        // multiplication
+        else if (choice == 3) {
             
         }
-        while (choice == 4) {
+        
+        // division (no remainder)
+        else if (choice == 4) {
             
         }
-        while (choice == 5) {
+        
+        // factorial
+        else if (choice == 5) {
             int factorial = 1; // result
             int fInput = 0; // input
             
-            cout << "Type what number you want to be factorialed, type 0 to leave.\nFactorial: ";
+            cout << "Type what number you want to be factorialed.\nFactorial: ";
             cin >> fInput;
             
-            if (fInput == 0) { // exit
-                cout << "\n";
+            // failsafe + exit
+            if (cin.fail()) {
+                cin.clear();
+                cin.ignore(1000,'\n');
                 choice = 0;
+                cout << "\nexiting mode...\n\n";
+                continue;
             }
-            if (fInput < 0) {
-                cout << "error\n\n";
-                choice = 0;
+            
+            // if zero
+            else if (fInput == 0) {
+                cout << "The factorial is 1.\n\n";
             }
-            if (choice != 0) {
+            
+            // if <0
+            else if (fInput < 0) {
+                cout << "error, less than zero\n\n";
+            }
+            
+            // main factorial
+            else {
                 for (fInput; fInput > 1; --fInput) { // does the math
                     factorial = factorial * fInput;
                 }
                 cout << "The factorial is " << factorial << ".\n\n";
             }
         }
-        if (choice == 6) {
+        
+        // exit
+        else if (choice == 6) {
             cout << "Byeeeeeee :3 :3 :3";
             break;
         }
     }
     return uses;
 }
+
+/*
+Note: any non-number exits the mode, this is intended. the "type "exit"" is there to
+make the user feel more confident and in control.
+*/
