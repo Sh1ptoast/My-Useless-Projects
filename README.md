@@ -1,5 +1,5 @@
 Welcome to my simple projects! I am a C++ coder with a degree in Computer Science. This is a collection of some fun projects I've done in my free time. Feel free to copy or download these if you want. To run them in Codespace, go to the file and press F5, then click into the console and follow the instructions it outputs.
 
-Please note that not all of these projects are in their finished states, some may loop, end abruptly, or have errors. 
+Please note that not all of these projects are in their finished states, some may loop, end abruptly, or have errors. The calculator (calc.cpp), while not done, is the project I'm currently proudest of, and I believe it shows my abilities the best.
 
 As a final note, I am currently working on an unreleased text-based game, so I am not uploading many new files here as frequently as I used to.
