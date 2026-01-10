@@ -59,11 +59,10 @@ int main() {
 
 		// addition
 		else if (choice == 1) {
-
 			int add1 = 0;
 			int add2 = 0;
-			int sum = 0;
-
+			int addSum = 0;
+            
 			cout << "Type what two numbers you want to be added.\nFirst number: ";
 			cin >> add1;
 			// failsafe + exit
@@ -78,16 +77,38 @@ int main() {
 				state = RunState::modeExit;
 				continue;
 			}
-
-			sum = add1 + add2;
-			cout << "The sum is "<< sum << ".\n\n";
+            
+			addSum = add1 + add2;
+			cout << "The sum is "<< addSum << ".\n\n";
 			state = RunState::success;
 			continue;
 		}
 
 		// subtraction
 		else if (choice == 2) {
-
+			int sub1 = 0;
+			int sub2 = 0;
+			int subSum = 0;
+            
+			cout << "Type what two numbers you want to be subtracted.\nFirst number: ";
+			cin >> add1;
+			// failsafe + exit
+			if (cin.fail()) {
+				state = RunState::modeExit;
+				continue;
+			}
+			cout << "\nAnd the second number: ";
+			cin >> add2;
+			// failsafe + exit
+			if (cin.fail()) {
+				state = RunState::modeExit;
+				continue;
+			}
+            
+			subSum = sub1 + sub2;
+			cout << "The difference is "<< subSum << ".\n\n";
+			state = RunState::success;
+			continue;
 		}
 
 		// multiplication
