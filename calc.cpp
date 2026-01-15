@@ -36,7 +36,6 @@ int main() {
 		}
 
 		// menu
-		// TODO: change choice to cases
 		if (choice == 0) {
 			if (uses == 0) {
 				cout << "Welcome to the calculator app! choose what you want to see. Type \"exit\" to exit a mode.\n" <<
