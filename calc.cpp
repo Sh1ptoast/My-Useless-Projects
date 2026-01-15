@@ -61,7 +61,7 @@ int main() {
 		else if (choice == 1) {
 			int add1 = 0;
 			int add2 = 0;
-			int addSum = 0;
+			int sum = 0;
             
 			cout << "Type what two numbers you want to be added.\nFirst number: ";
 			cin >> add1;
@@ -78,8 +78,8 @@ int main() {
 				continue;
 			}
             
-			addSum = add1 + add2;
-			cout << "The sum is "<< addSum << ".\n\n";
+			sum = add1 + add2;
+			cout << "The sum is "<< sum << "\n\n";
 			state = RunState::success;
 			continue;
 		}
@@ -88,37 +88,88 @@ int main() {
 		else if (choice == 2) {
 			int sub1 = 0;
 			int sub2 = 0;
-			int subSum = 0;
+			int difference = 0;
             
 			cout << "Type what two numbers you want to be subtracted.\nFirst number: ";
-			cin >> add1;
+			cin >> sub1;
 			// failsafe + exit
 			if (cin.fail()) {
 				state = RunState::modeExit;
 				continue;
 			}
 			cout << "\nAnd the second number: ";
-			cin >> add2;
+			cin >> sub2;
 			// failsafe + exit
 			if (cin.fail()) {
 				state = RunState::modeExit;
 				continue;
 			}
             
-			subSum = sub1 + sub2;
-			cout << "The difference is "<< subSum << ".\n\n";
+			difference = sub1 - sub2;
+			cout << "The difference is "<< difference << "\n\n";
 			state = RunState::success;
 			continue;
 		}
 
 		// multiplication
 		else if (choice == 3) {
-
+			int mult1 = 0;
+			int mult2 = 0;
+			int product = 0;
+			
+			cout << "Type what two numbers you want to multiply.\nFirst number: ";
+			cin >> mult1;
+			// failsafe + exit
+			if (cin.fail()) {
+				state = RunState::modeExit;
+				continue;
+			}
+			cout << "\nAnd the second number: ";
+			cin >> mult2;
+			// failsafe + exit
+			if (cin.fail()) {
+				state = RunState::modeExit;
+				continue;
+			}
+            
+			product = mult1 * mult2;
+			cout << "The product is "<< product << "\n\n";
+			state = RunState::success;
+			continue;
 		}
 
 		// division (no remainder)
 		else if (choice == 4) {
-
+            double div1 = 0;
+			double div2 = 0;
+			double quotient = 0;
+			
+			cout << "Type what two numbers you want to divide.\nDividend: ";
+			cin >> div1;
+			// failsafe + exit
+			if (cin.fail()) {
+				state = RunState::modeExit;
+				continue;
+			}
+			cout << "\nDivisor: ";
+			cin >> div2;
+			// failsafe + exit
+			if (cin.fail()) {
+				state = RunState::modeExit;
+				continue;
+			}
+			
+			// if divided by zero
+			if (div2 == 0) {
+			    cout << "Error, division by zero is not allowed.";
+			    state = RunState::modeExit;
+			    continue;
+			}
+            
+			quotient = div1 / div2;
+			cout << "The quotient is "<< quotient << "\n\n";
+			state = RunState::success;
+			continue;
 		}
 
 		// factorial
@@ -137,14 +188,14 @@ int main() {
 
 			// if zero
 			else if (fInput == 0) {
-				cout << "The factorial is 1.\n\n";
+				cout << "The factorial is 1\n\n";
 				state = RunState::success;
 				continue;
 			}
 
 			// if <0
 			else if (fInput < 0) {
-				cout << "Error, less than zero.\n\n";
+				cout << "Error, the input is less than zero.";
 				state = RunState::modeExit;
 				continue;
 			}
@@ -154,7 +205,7 @@ int main() {
 				for (int i = fInput; i > 1; --i) { // does the math
 					factorial *= i;
 				}
-				cout << "The factorial is " << factorial << ".\n\n";
+				cout << "The factorial is " << factorial << "\n\n";
 				state = RunState::success;
 				continue;
 			}
@@ -167,7 +218,7 @@ int main() {
 		}
 	}
 
-	cout << "Number of uses: " << uses << "\n";
+	cout << "Number of successful uses: " << uses << "\n";
 	return 0;
 }
 
